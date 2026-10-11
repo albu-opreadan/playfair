@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cifrul Playfair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Cifrul Playfair</h1>
+
+    <div class="row">
+      <label>Limba
+        <select id="lang">
+          <option value="ro">Română (31 litere)</option>
+          <option value="en">English (25 litere, I = J)</option>
+        </select>
+      </label>
+      <label>Operația
+        <select id="mode">
+          <option value="enc">Criptare</option>
+          <option value="dec">Decriptare</option>
+        </select>
+      </label>
+    </div>
+
+    <label>Cheia (minim 7 litere)
+      <input type="text" id="key" placeholder="ex: MONARHIE" autocomplete="off">
+    </label>
+
+    <label><span id="inputLabel">Mesaj</span>
+      <textarea id="input" rows="4" placeholder="Doar litere A-Z, fără spații"></textarea>
+    </label>
+
+    <button id="run">Criptează</button>
+
+    <p id="error" class="error"></p>
+
+    <label>Rezultat
+      <textarea id="output" rows="4" readonly></textarea>
+    </label>
+    <button id="copy" class="secondary">Copiază</button>
+
+    <h2>Matricea</h2>
+    <div id="grid"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
